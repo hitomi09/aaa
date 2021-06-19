@@ -3,28 +3,40 @@ from flask important Flask
 application = Flask(__name__)
 
 @app.route('/')
-aisatsu = input()
+def root():
+    aisatsu = """
+<html><body>
+<form action="/greeting" method="post">
+ <input type="text" name="a">
+ <input type="submit" value="入力">
+</form>
+</body></html>
+"""
+    return aisatsu
+
+@app.route('/greeting', methods=["post"])
+def greeting():
 if aisatsu == "good morning":
-  print("おはよう")
+  return "おはよう".format(ret)
 if aisatsu == "Good morning":
-  print("おはよう") 
+  return "おはよう".format(ret)
 if aisatsu == "Good Morning":
-  print("おはよう") 
+  return "おはよう".format(ret)
 if aisatsu == "GOOD MORNING":
-  print("おはよう") 
+  return "おはよう".format(ret) 
 if aisatsu == "hello":
-  print("こんにちは")
+  return "こんにちは".format(ret)
 if aisatsu == "Hello":
-  print("こんにちは")
+  return "こんにちは".format(ret)
 if aisatsu == "HELLO":
-  print("こんにちは")
+  return "こんにちは".format(ret)
 if aisatsu == "good evening":
-  print("こんばんは")
+  return "こんばんは".format(ret)
 if aisatsu == "Good evening":
-  print("こんばんは")
+  return "こんばんは".format(ret)
 if aisatsu == "Good Evening":
-  print("こんばんは")
+  return "こんばんは".format(ret)
 if aisatsu == "GOOD EVENING":
-  print("こんばんは")
+  return "こんばんは".format(ret)
 else:
-  print("わかりません")
+  return "わかりません".format(ret)
