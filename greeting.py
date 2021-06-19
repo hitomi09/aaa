@@ -2,6 +2,7 @@ from flask important Flask
 
 application = Flask(__name__)
 
+@app.route('/')
 aisatsu = input()
 if aisatsu == "good morning":
   print("おはよう")
