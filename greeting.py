@@ -1,42 +1,42 @@
-from flask important Flask
+from flask import Flask
 
 application = Flask(__name__)
 
 @app.route('/')
 def root():
-    aisatsu = """
+    s = """
 <html><body>
-<form action="/greeting" method="post">
+<form action="/calc" method="post">
  <input type="text" name="a">
  <input type="submit" value="入力">
 </form>
 </body></html>
 """
-    return aisatsu
+    return s
 
-@app.route('/greeting', methods=["post"])
-def greeting():
-{% if aisatsu == "good morning" %}
+@app.route('/calc', methods=["post"])
+def calc():
+{% if a == "good morning" %}
   return "おはよう".format(ret)
-{% if aisatsu == "Good morning" %}
+{% if a == "Good morning" %}
   return "おはよう".format(ret)
-{% if aisatsu == "Good Morning" %}
+{% if a == "Good Morning" %}
   return "おはよう".format(ret)
-{% if aisatsu == "GOOD MORNING" %}
+{% if a == "GOOD MORNING" %}
   return "おはよう".format(ret) 
-{% if aisatsu == "hello" %}
+{% if a == "hello" %}
   return "こんにちは".format(ret)
-{% if aisatsu == "Hello" %}
+{% if a == "Hello" %}
   return "こんにちは".format(ret)
-{% if aisatsu == "HELLO" %}
+{% if a == "HELLO" %}
   return "こんにちは".format(ret)
-{% if aisatsu == "good evening" %}
+{% if a == "good evening" %}
   return "こんばんは".format(ret)
-{% if aisatsu == "Good evening" %}
+{% if a == "Good evening" %}
   return "こんばんは".format(ret)
-{% if aisatsu == "Good Evening" %}
+{% if a == "Good Evening" %}
   return "こんばんは".format(ret)
-{% if aisatsu == "GOOD EVENING" %}
+{% if a == "GOOD EVENING" %}
   return "こんばんは".format(ret)
 {% else %}
   return "わかりません".format(ret)
