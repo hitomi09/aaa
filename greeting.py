@@ -16,27 +16,27 @@ def root():
 
 @app.route('/greeting', methods=["post"])
 def greeting():
-if aisatsu == "good morning":
+{% if aisatsu == "good morning" %}
   return "おはよう".format(ret)
-if aisatsu == "Good morning":
+{% if aisatsu == "Good morning" %}
   return "おはよう".format(ret)
-if aisatsu == "Good Morning":
+{% if aisatsu == "Good Morning" %}
   return "おはよう".format(ret)
-if aisatsu == "GOOD MORNING":
+{% if aisatsu == "GOOD MORNING" %}
   return "おはよう".format(ret) 
-if aisatsu == "hello":
+{% if aisatsu == "hello" %}
   return "こんにちは".format(ret)
-if aisatsu == "Hello":
+{% if aisatsu == "Hello" %}
   return "こんにちは".format(ret)
-if aisatsu == "HELLO":
+{% if aisatsu == "HELLO" %}
   return "こんにちは".format(ret)
-if aisatsu == "good evening":
+{% if aisatsu == "good evening" %}
   return "こんばんは".format(ret)
-if aisatsu == "Good evening":
+{% if aisatsu == "Good evening" %}
   return "こんばんは".format(ret)
-if aisatsu == "Good Evening":
+{% if aisatsu == "Good Evening" %}
   return "こんばんは".format(ret)
-if aisatsu == "GOOD EVENING":
+{% if aisatsu == "GOOD EVENING" %}
   return "こんばんは".format(ret)
-else:
+{% else %}
   return "わかりません".format(ret)
