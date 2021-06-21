@@ -19,27 +19,27 @@ def root():
 def gree():
     a = str(request.form.get("a"))
     {% if a == "good morning" %}
-      return "おはよう".format(ret)
+      ret = "おはよう"
     {% if a == "Good morning" %}
-      return "おはよう".format(ret)
+      ret = "おはよう"
     {% if a == "Good Morning" %}
-      return "おはよう".format(ret)
+      ret = "おはよう"
     {% if a == "GOOD MORNING" %}
-      return "おはよう".format(ret) 
+      ret = "おはよう"
     {% if a == "hello" %}
-      return "こんにちは".format(ret)
+      ret = "こんにちは"
     {% if a == "Hello" %}
-      return "こんにちは".format(ret)
+      ret = "こんにちは"
     {% if a == "HELLO" %}
-      return "こんにちは".format(ret)
+      ret = "こんにちは"
     {% if a == "good evening" %}
-      return "こんばんは".format(ret)
+      ret = "こんばんは"
     {% if a == "Good evening" %}
-      return "こんばんは".format(ret)
+      ret = "こんばんは"
     {% if a == "Good Evening" %}
-      return "こんばんは".format(ret)
+      ret = "こんにちは"
     {% if a == "GOOD EVENING" %}
-      return "こんばんは".format(ret)
+      ret = "こんにちは"
     {% else %}
-      return "わかりません".format(ret)
-    return "。".format(ret)
+      ret = "わかりません"
+    return "{}。".format(ret)
