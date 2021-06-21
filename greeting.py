@@ -1,4 +1,5 @@
 from flask import Flask
+import requests
 
 application = Flask(__name__)
 
@@ -6,7 +7,7 @@ application = Flask(__name__)
 def root():
     s = """
 <html><body>
-<form action="/calc" method="post">
+<form action="gree" method="post">
  <input type="text" name="a">
  <input type="submit" value="入力">
 </form>
@@ -14,8 +15,8 @@ def root():
 """
     return s
 
-@app.route('/calc', methods=["post"])
-def calc():
+@app.route('/gree', methods=["post"])
+def gree():
 {% if a == "good morning" %}
   return "おはよう".format(ret)
 {% if a == "Good morning" %}
